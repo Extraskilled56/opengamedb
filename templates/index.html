@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Game Database</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Open Game Database</h1>
+    <a href="/add_site" class="button">Add a New Site</a>
+    <div class="feed">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Domain</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for site in sites %}
+                    <tr>
+                        <td>{{ site.name }}</td>
+                        <td><a href="{{ site.domain }}">{{ site.domain }}</a></td>
+                        <td>{{ site.description }}</td>
+                        <td>{{ site.status }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

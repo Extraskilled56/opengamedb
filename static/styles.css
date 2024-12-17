@@ -1,0 +1,93 @@
+body {
+    background-color: #2c2c2c; /* Dark grey background for the body */
+    color: #ffffff; /* White text color for contrast */
+    font-family: Arial, sans-serif; /* Set a clean font */
+}
+
+h1 {
+    color: #ff6600; /* Neon orange for headings */
+}
+
+form {
+    background-color: #444444; /* Slightly lighter grey for the form background */
+    padding: 15px;
+    border-radius: 5px; /* Rounded corners */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+label {
+    display: block; /* Ensure labels are on their own line */
+    margin: 10px 0 5px; /* Margin for spacing */
+}
+
+input[type="text"], textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding for inputs */
+    margin-bottom: 10px; /* Space below inputs */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #fff; /* White background for inputs */
+}
+
+input[type="submit"] {
+    background-color: #ff6600; /* Neon orange background */
+    color: #ffffff; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+input[type="submit"]:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+}
+
+.feed {
+    padding: 15px;
+    background-color: #444444; /* Slightly lighter grey for the feed */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Ensure it takes up the full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Merge borders */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Add border between rows */
+}
+
+
+
+th {
+    background-color: #ff6600; /* Neon orange for header */
+    color: #ffffff; /* White text for header */
+    font-weight: bold;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0; /* Add some margin for spacing */
+    background-color: #ff6600; /* Neon orange background */
+    color: #ffffff; /* White text */
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    font-size: 16px; /* Increase font size */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.button:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+}
+a {
+    color: #ff6600; /* Neon orange color for links */
+}
+

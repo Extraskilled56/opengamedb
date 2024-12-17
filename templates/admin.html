@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Open Game Database</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Admin - Manage Sites</h1>
+    <form action="/admin" method="POST">
+        <label for="pin">Enter PIN:</label>
+        <input type="password" id="pin" name="pin" required>
+        <input type="submit" value="Submit" class="button">
+    </form>
+    <a href="/logout" class="button">Logout</a>
+    {% if authorized %}
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Domain</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for site in sites %}
+                <tr>
+                    <form action="/update_site/{{ site.id }}" method="POST">
+                        <td><input type="text" name="name" value="{{ site.name }}" required></td>
+                        <td><input type="text" name="domain" value="{{ site.domain }}" required></td>
+                        <td><input type="text" name="description" value="{{ site.description }}" required></td>
+                        <td>
+                            <select name="status">
+                                <option value="active" {% if site.status == 'active' %}selected{% endif %}>Active</option>
+                                <option value="blocked" {% if site.status == 'blocked' %}selected{% endif %}>Blocked</option>
+                                <option value="pending" {% if site.status == 'pending' %}selected{% endif %}>Pending</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="submit" value="Update" class="button">
+                        </td>
+                    </form>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</body>
+</html>
